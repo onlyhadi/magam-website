@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAGAM – Watches </title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Urbanist', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #111;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .logo {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        background: none;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(145deg, #141414, #1f1f1f);
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      background: #fff;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+    .btn:hover {
+      background: #ddd;
+    }
+    .collection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+    .item {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .item:hover {
+      transform: translateY(-10px);
+    }
+    .item img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .item h3 {
+      margin: 0.5rem 0;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .item p {
+      font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+    .footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MAGAM</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobileMenu">
+      <a href="#watches">Watches</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Luxury Timepieces</h1>
+    <p>Redefining time with a bold, modern edge.</p>
+    <button class="btn">Discover Watches</button>
+  </section>
+
+  <section class="collection" id="watches">
+    <div class="item">
+      <img src="https://i.postimg.cc/MG7svwW3/image-2025-06-30-024443919.png" alt="MAGAM Shadow">
+      <h3>MAGAM Shadow</h3>
+      <p>Bold. Black. Timeless.</p>
+    </div>
+    <div class="item">
+      <img src="https://i.postimg.cc/bJ0RN997/image-2025-06-30-024238564.png" alt="MAGAM Nova">
+      <h3>MAGAM Nova</h3>
+      <p>Classic meets contemporary.</p>
+    </div>
+    <div class="item">
+      <img src="https://i.postimg.cc/Kv7CsC32/image-2025-06-30-024656159.png" alt="MAGAM Luxe">
+      <h3>MAGAM Luxe</h3>
+      <p>Shine bright every moment.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 MAGAM. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      menu.style.flexDirection = 'column';
+      menu.style.alignItems = 'center';
+      menu.style.marginTop = '1rem';
+    }
+  </script>
+</body>
+</html>
